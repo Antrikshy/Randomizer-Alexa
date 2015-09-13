@@ -1,0 +1,21 @@
+{
+  "intents": [
+    {
+      "intent": "GenerateNumberIntent",
+      "slots": [
+      {
+          "name": "Min",
+          "type": "NUMBER"
+        },
+        {
+          "name": "Max",
+          "type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "FlipCoinIntent",
+      "slots": []
+    }
+  ]
+}
