@@ -1,7 +1,7 @@
 /**
  * App ID for the skill
  */
-var APP_ID = undefined;
+var APP_ID = "amzn1.echo-sdk-ams.app.24d0e151-32b8-489a-a9e8-b5b2795763b2";
 
 /**
  * The AlexaSkill prototype and helper functions
@@ -23,8 +23,6 @@ Randomizer.prototype.eventHandlers.onSessionStarted = function (sessionStartedRe
 
 Randomizer.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
     console.log("Randomizer onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
-    var speechOutput = "Welcome to the Alexa Skills Kit, you can say hello";
-    response.ask(speechOutput);
 };
 
 Randomizer.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
@@ -33,17 +31,37 @@ Randomizer.prototype.eventHandlers.onSessionEnded = function (sessionEndedReques
 };
 
 Randomizer.prototype.intentHandlers = {
-    RandomizerIntent: function (intent, session, response) {
-        response.tellWithCard("Hello World!", "Greeter", "Hello World!");
+    GenerateNumberIntent: function (intent, session, response) {
+        console.log("GenerateNumberIntent detected");
+        
+        var min = parseInt(intent.slots.Min.value);
+        var max = parseInt(intent.slots.Max.value);
+
+        console.log("Min and max: " + min + ", " + max);
+
+        var output = getRandomInt(min, max);
+        console.log("Random number: " + output);
+        response.tell(output);
     },
-    HelpIntent: function (intent, session, response) {
-        response.ask("You can say hello to me!");
+    FlipCoinIntent: function (intent, session, response) {
+        console.log("FlipCoinIntent detected");
+
+        var random = Math.random() >= 0.5;
+
+        var output = (random) ? "Heads." : "Tails.";
+        console.log("Coin flip result: " + output);
+        response.tell(output);
     }
 };
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-    var Randomizer = new Randomizer();
-    Randomizer.execute(event, context);
+    var randomizer = new Randomizer();
+    randomizer.execute(event, context);
 };
 
+// Helpers
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}

@@ -1,24 +1,23 @@
-GenerateNumberIntent 
-GenerateNumberIntent 
-GenerateNumberIntent 
-GenerateNumberIntent 
-GenerateNumberIntent 
-GenerateNumberIntent 
-GenerateNumberIntent 
+GenerateNumberIntent for a number between {one|Min} and {one|Max}
+GenerateNumberIntent for a number between {two|Min} and {two|Max}
+GenerateNumberIntent for a number between {three|Min} and {three|Max}
+GenerateNumberIntent for a number between {four|Min} and {four|Max}
+GenerateNumberIntent for a number between {five|Min} and {five|Max}
+GenerateNumberIntent for a number between {thirty two|Min} and {fifty six|Max}
+GenerateNumberIntent for a number between {forty nine|Min} and {ninety seven|Max}
+GenerateNumberIntent for a number between {one hundred and eight|Min} and {two hundred twenty|Max}
+GenerateNumberIntent for a number between {one hundred eleven|Min} and {two hundred and sixty|Max}
+GenerateNumberIntent to generate a number between {one|Min} and {ten|Max}
+GenerateNumberIntent to generate a number between {one|Min} and {twenty|Max}
+GenerateNumberIntent to generate a number between {one|Min} and {thirty|Max}
+GenerateNumberIntent to generate a number between {thirty two|Min} and {fifty six|Max}
+GenerateNumberIntent to generate a number between {forty nine|Min} and {ninety seven|Max}
+GenerateNumberIntent to generate a number between {one hundred and eight|Min} and {two hundred twenty|Max}
+GenerateNumberIntent to generate a number between {one hundred eleven|Min} and {two hundred and sixty|Max}
 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
-FlipCoinIntent 
+FlipCoinIntent to flip a coin 
+FlipCoinIntent to toss a coin
+FlipCoinIntent heads or tails
+FlipCoinIntent heads tails
+FlipCoinIntent coin flip
+FlipCoinIntent coin toss
