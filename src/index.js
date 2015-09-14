@@ -23,6 +23,11 @@ Randomizer.prototype.eventHandlers.onSessionStarted = function (sessionStartedRe
 
 Randomizer.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
     console.log("Randomizer onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
+    var speechOutput = "You can ask the Randomizer skill to flip a coin, " +
+                        "or to generate a random number by specifying a " +
+                        "minimum and maximum. Just say 'flip a coin', or " +
+                        "'generate a number between one and twenty'.";
+    response.ask(speechOutput);
 };
 
 Randomizer.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
