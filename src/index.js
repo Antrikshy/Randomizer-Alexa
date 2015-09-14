@@ -1,7 +1,7 @@
 /**
  * App ID for the skill
  */
-var APP_ID = "amzn1.echo-sdk-ams.app.24d0e151-32b8-489a-a9e8-b5b2795763b2";
+var APP_ID = "[APP_ID here]";
 
 /**
  * The AlexaSkill prototype and helper functions
